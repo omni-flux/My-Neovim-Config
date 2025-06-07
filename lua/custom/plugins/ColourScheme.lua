@@ -1,3 +1,11 @@
+function ColourMyPencil(color)
+  color = color or 'darcubox'
+  vim.cmd.colorscheme(color)
+
+  vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+  vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+end
+
 -- return {
 --   {
 --     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
@@ -14,6 +22,7 @@
 --     end,
 --   },
 -- }
+
 return {
   {
     'Koalhack/darcubox-nvim',
